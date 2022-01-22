@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+body {
+  background-color: #222;
+}
+
+.card {
+  position: absolute;
+  top: 120px;
+  left: 150px;
+  height: 350px;
+  width: 600px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 15px;
+  box-shadow: 4px 4px 5px #333;
+  z-index: 1;
+}
+
+.card p {
+  font-family: "Lato";
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-left: 30px;
+}
+
+.card .card-bank {
+  font-size: 30px;
+  margin-bottom: 150px;
+}
+
+.card .card-text {
+  font-size: 22px;
+}
+
+.card div {
+  position: absolute;
+  top: 250px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  opacity: 0.85;
+}
+
+.card .circle-red {
+  left: 470px;
+  background: orangered;
+  z-index: 1;
+}
+
+.card .circle-yellow {
+  left: 500px;
+  background: gold;
+}
+
+.circle-green {
+  border-radius: 50%;
+  position: absolute;
+  background: linear-gradient(to right bottom, yellowgreen, green);
+  opacity: 0.9;
+}
+
+.circle-1 {
+  top: 80px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.circle-2 {
+  top: 420px;
+  left: 250px;
+  width: 130px;
+  height: 130px;
+}
+
+.circle-3 {
+  top: 150px;
+  left: 700px;
+  width: 160px;
+  height: 160px;
+}
