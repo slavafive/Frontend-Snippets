@@ -1,0 +1,48 @@
+body {
+  font: 1.8rem "Futura";
+  color: #fff;
+  text-align: center;
+}
+
+* {
+  box-sizing: box-model;
+}
+
+.row {
+  max-width: 64rem;
+  margin: 0 auto;
+  background: white;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.row [class^="column"] {
+  background: yellowgreen;
+  float: left;
+}
+.row [class^="column"]:not(:last-child) {
+  margin-right: 3rem;
+}
+.row .column-1-of-2 {
+  width: calc((100% - 3rem) / 2);
+}
+.row .column-1-of-3 {
+  width: calc((100% - 2 * 3rem) / 3);
+}
+.row .column-1-of-4 {
+  width: calc((100% - 3 * 3rem) / 4);
+}
+.row .column-1-of-5 {
+  width: calc((100% - 4 * 3rem) / 5);
+}
+.row .column-2-of-3 {
+  width: calc(2 * (100% - 2 * 3rem) / 3 + 3rem);
+}
+.row .column-2-of-5 {
+  width: calc(2 * (100% - 4 * 3rem) / 5 + 3rem);
+}

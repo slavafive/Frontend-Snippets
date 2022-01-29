@@ -1,0 +1,69 @@
+$color-row: white;
+$color-column: yellowgreen;
+$color-text: #fff;
+
+$gap-horizontal: 3rem;
+$gap-vertical: 4rem;
+
+body {
+  font: 1.8rem "Futura";
+  color: $color-text;
+  text-align: center;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+* {
+  box-sizing: box-model;
+}
+
+.row {
+  max-width: 64rem;
+  margin: 0 auto;
+  background: $color-row;
+
+  @include clearfix;
+
+  &:not(:last-child) {
+    margin-bottom: $gap-vertical;
+  }
+
+  [class^="column"] {
+    background: $color-column;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gap-horizontal;
+    }
+  }
+
+  .column-1-of-2 {
+    width: calc((100% - #{$gap-horizontal}) / 2);
+  }
+
+  .column-1-of-3 {
+    width: calc((100% - 2 * #{$gap-horizontal}) / 3);
+  }
+
+  .column-1-of-4 {
+    width: calc((100% - 3 * #{$gap-horizontal}) / 4);
+  }
+
+  .column-1-of-5 {
+    width: calc((100% - 4 * #{$gap-horizontal}) / 5);
+  }
+
+  .column-2-of-3 {
+    width: calc(2 * (100% - 2 * #{$gap-horizontal}) / 3 + #{$gap-horizontal});
+  }
+
+  .column-2-of-5 {
+    width: calc(2 * (100% - 4 * #{$gap-horizontal}) / 5 + #{$gap-horizontal});
+  }
+}
